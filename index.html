@@ -10,36 +10,75 @@
   <header>
     <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm Logo" class="logo"/>
     <h1>Harvey Spector Law Firm</h1>
-    <p>Justice. Precision. Power.</p>
+    <p>GTA V FiveM Law Experts Backed by Real-World Legal Experience</p>
   </header>
 
   <section class="hero">
-    <h2>Your Justice Is Our Priority</h2>
-    <p>Legal expertise that makes a difference. Protecting your rights with passion and precision.</p>
+    <h2>In-Game Justice, Real Legal Precision</h2>
+    <p>Whether it’s a court case or an RP legal dispute, we bring courtroom expertise to FiveM.</p>
   </section>
 
   <section class="practice-areas">
-    <h2>Practice Areas</h2>
+    <h2>What We Handle</h2>
     <ul>
-      <li>Criminal Defense</li>
-      <li>Corporate Law</li>
-      <li>Litigation</li>
-      <li>Real Estate Law</li>
+      <li>RP Criminal Defense</li>
+      <li>Property Disputes</li>
+      <li>Business/Contract Law</li>
+      <li>Courtroom Representation</li>
     </ul>
   </section>
 
   <section class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2>Request Legal Help</h2>
+    <form id="lawForm">
+      <input type="text" id="name" placeholder="Your Full Name" required/>
+      <input type="text" id="discord" placeholder="Your Discord Username (e.g., Harvey#0001)" required/>
+      <textarea id="case" placeholder="Brief Description of Your Case" rows="6" required></textarea>
+      <button type="submit">Send Request</button>
     </form>
+    <p id="responseMsg"></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Harvey Spector Law Firm. All rights reserved.</p>
   </footer>
+
+  <script>
+    const form = document.getElementById("lawForm");
+    const msg = document.getElementById("responseMsg");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const discord = document.getElementById("discord").value;
+      const caseDetails = document.getElementById("case").value;
+
+      const content = {
+        content: "**New Legal Case Submission**\n"
+                + "**Name:** " + name + "\n"
+                + "**Discord:** " + discord + "\n"
+                + "**Case:** " + caseDetails
+      };
+
+      const webhookURL = "https://discord.com/api/webhooks/1370296116888735744/epaPerOLsPbPZQozVebJRHaEod4TU_1a8j-_bcDSweE9ilMWi9hlBtGWVWuO3yxJXqW9";
+
+      try {
+        const response = await fetch(webhookURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(content)
+        });
+
+        if (response.ok) {
+          msg.innerText = "✅ Your request was sent successfully!";
+          form.reset();
+        } else {
+          msg.innerText = "❌ Failed to send. Try again.";
+        }
+      } catch (err) {
+        msg.innerText = "❌ Error sending request.";
+      }
+    });
+  </script>
 </body>
 </html>
