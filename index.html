@@ -8,39 +8,43 @@
 </head>
 <body>
   <header>
-    <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm Logo" class="logo"/>
-    <h1>Harvey Spector Law Firm</h1>
-    <p>GTA V FiveM Law Experts Backed by Real-World Legal Experience</p>
+    <div class="logo-container">
+      <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm Logo" class="logo"/>
+      <h1>Harvey Spector Law Firm</h1>
+      <p class="tagline">Elite Legal Expertise for the FiveM Universe</p>
+    </div>
   </header>
 
   <section class="hero">
-    <h2>In-Game Justice, Real Legal Precision</h2>
-    <p>Whether it’s a court case or an RP legal dispute, we bring courtroom expertise to FiveM.</p>
+    <div class="hero-overlay">
+      <h2>Your Justice. Our Mission.</h2>
+      <p>Combining real legal experience with cutting-edge GTA V FiveM representation.</p>
+    </div>
   </section>
 
   <section class="practice-areas">
-    <h2>What We Handle</h2>
-    <ul>
-      <li>RP Criminal Defense</li>
-      <li>Property Disputes</li>
-      <li>Business/Contract Law</li>
-      <li>Courtroom Representation</li>
-    </ul>
+    <h2>Areas of Practice</h2>
+    <div class="grid">
+      <div class="card">Criminal Defense</div>
+      <div class="card">Civil Litigation</div>
+      <div class="card">Property Law</div>
+      <div class="card">Business Contracts</div>
+    </div>
   </section>
 
   <section class="contact">
-    <h2>Request Legal Help</h2>
+    <h2>Get Legal Assistance</h2>
     <form id="lawForm">
       <input type="text" id="name" placeholder="Your Full Name" required/>
-      <input type="text" id="discord" placeholder="Your Discord Username (e.g., Harvey#0001)" required/>
-      <textarea id="case" placeholder="Brief Description of Your Case" rows="6" required></textarea>
-      <button type="submit">Send Request</button>
+      <input type="text" id="discord" placeholder="Discord Username (e.g., Harvey#0001)" required/>
+      <textarea id="case" placeholder="Describe your case in detail..." rows="6" required></textarea>
+      <button type="submit">Submit Request</button>
     </form>
     <p id="responseMsg"></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Harvey Spector Law Firm. All rights reserved.</p>
+    <p>&copy; 2025 Harvey Spector Law Firm. All Rights Reserved.</p>
   </footer>
 
   <script>
@@ -54,10 +58,10 @@
       const caseDetails = document.getElementById("case").value;
 
       const content = {
-        content: "**New Legal Case Submission**\n"
+        content: "**New Case Submission**\n"
                 + "**Name:** " + name + "\n"
                 + "**Discord:** " + discord + "\n"
-                + "**Case:** " + caseDetails
+                + "**Case Details:** " + caseDetails
       };
 
       const webhookURL = "https://discord.com/api/webhooks/1370296116888735744/epaPerOLsPbPZQozVebJRHaEod4TU_1a8j-_bcDSweE9ilMWi9hlBtGWVWuO3yxJXqW9";
@@ -70,10 +74,10 @@
         });
 
         if (response.ok) {
-          msg.innerText = "✅ Your request was sent successfully!";
+          msg.innerText = "✅ Case submitted successfully.";
           form.reset();
         } else {
-          msg.innerText = "❌ Failed to send. Try again.";
+          msg.innerText = "❌ Failed to submit. Please try again.";
         }
       } catch (err) {
         msg.innerText = "❌ Error sending request.";
