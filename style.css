@@ -13,9 +13,13 @@ body {
 header h1 {
   font-size: 2.5rem;
 }
+header p {
+  margin-top: -10px;
+  font-size: 1rem;
+}
 .hero {
-  padding: 40px 20px;
-  background-color: #1a2639;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #1a2639, #0d1b2a);
 }
 .practice-areas ul {
   list-style: none;
@@ -33,20 +37,30 @@ header h1 {
 }
 .contact input, .contact textarea {
   margin: 10px 0;
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
+  padding: 12px;
+  width: 90%;
+  max-width: 500px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 .contact button {
   background-color: #f0c808;
   color: #0d1b2a;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
+  margin-top: 10px;
+}
+.contact button:hover {
+  background-color: #ffd700;
+}
+#responseMsg {
+  margin-top: 15px;
+  font-weight: bold;
 }
 footer {
   padding: 20px;
