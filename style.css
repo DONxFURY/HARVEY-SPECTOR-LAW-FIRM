@@ -1,0 +1,54 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #0d1b2a;
+  color: #f0c808;
+  text-align: center;
+}
+.logo {
+  width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+.hero {
+  padding: 40px 20px;
+  background-color: #1a2639;
+}
+.practice-areas ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.practice-areas li {
+  margin: 10px 0;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+.contact button {
+  background-color: #f0c808;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+footer {
+  padding: 20px;
+  background-color: #1a2639;
+}
