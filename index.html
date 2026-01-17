@@ -5,84 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harvey Spector Law Firm</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm Logo" class="logo"/>
-      <h1>Harvey Spector Law Firm</h1>
-      <p class="tagline">Elite Legal Expertise for the FiveM Universe</p>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-overlay">
-      <h2>Your Justice. Our Mission.</h2>
-      <p>Combining real legal experience with cutting-edge GTA V FiveM representation.</p>
+<header class="site-header">
+  <div class="container header-flex">
+    <div class="brand">
+      <img src="HARVEY_SPECTOR_LAW_FIRM.png" class="logo" />
+      <div>
+        <h1>Harvey Spector</h1>
+        <span>Attorneys at Law</span>
+      </div>
     </div>
-  </section>
+    <nav>
+      <a href="#">Practice</a>
+      <a href="#">Team</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="practice-areas">
-    <h2>Areas of Practice</h2>
-    <div class="grid">
-      <div class="card">Criminal Defense</div>
-      <div class="card">Civil Litigation</div>
-      <div class="card">Property Law</div>
-      <div class="card">Business Contracts</div>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Power. Precision. Results.</h2>
+    <p>Elite legal representation for the FiveM universe.</p>
+    <a href="#contact" class="cta-btn">Request Counsel</a>
+  </div>
+</section>
+
+<section class="practice">
+  <div class="container">
+    <h3>Areas of Practice</h3>
+    <div class="practice-grid">
+      <div class="practice-card">Criminal Defense</div>
+      <div class="practice-card">Civil Litigation</div>
+      <div class="practice-card">Corporate Law</div>
+      <div class="practice-card">Asset Protection</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Get Legal Assistance</h2>
+<section class="contact" id="contact">
+  <div class="container narrow">
+    <h3>Confidential Case Review</h3>
     <form id="lawForm">
-      <input type="text" id="name" placeholder="Your Full Name" required/>
-      <input type="text" id="discord" placeholder="Discord Username (e.g., Harvey#0001)" required/>
-      <textarea id="case" placeholder="Describe your case in detail..." rows="6" required></textarea>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="text" id="discord" placeholder="Discord Username" required />
+      <textarea id="case" placeholder="Describe your situation..." rows="6" required></textarea>
       <button type="submit">Submit Request</button>
+      <p id="responseMsg"></p>
     </form>
-    <p id="responseMsg"></p>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Harvey Spector Law Firm. All Rights Reserved.</p>
-  </footer>
+<footer>
+  <div class="container footer-flex">
+    <p>© 2025 Harvey Spector Law Firm</p>
+    <span>Discretion. Power. Authority.</span>
+  </div>
+</footer>
 
-  <script>
-    const form = document.getElementById("lawForm");
-    const msg = document.getElementById("responseMsg");
+<script>
+  const form = document.getElementById("lawForm");
+  const msg = document.getElementById("responseMsg");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const discord = document.getElementById("discord").value;
-      const caseDetails = document.getElementById("case").value;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const discord = document.getElementById("discord").value;
+    const caseDetails = document.getElementById("case").value;
 
-      const content = {
-        content: "**New Case Submission**\n"
-                + "**Name:** " + name + "\n"
-                + "**Discord:** " + discord + "\n"
-                + "**Case Details:** " + caseDetails
-      };
+    const content = {
+      content: "**New Case Submission**\n"
+              + "**Name:** " + name + "\n"
+              + "**Discord:** " + discord + "\n"
+              + "**Case:** " + caseDetails
+    };
 
-      const webhookURL = "https://discord.com/api/webhooks/1370296116888735744/epaPerOLsPbPZQozVebJRHaEod4TU_1a8j-_bcDSweE9ilMWi9hlBtGWVWuO3yxJXqW9";
+    const webhookURL = "YOUR_WEBHOOK_HERE";
 
-      try {
-        const response = await fetch(webhookURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(content)
-        });
+    try {
+      const response = await fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(content)
+      });
 
-        if (response.ok) {
-          msg.innerText = "✅ Case submitted successfully.";
-          form.reset();
-        } else {
-          msg.innerText = "❌ Failed to submit. Please try again.";
-        }
-      } catch (err) {
-        msg.innerText = "❌ Error sending request.";
+      if (response.ok) {
+        msg.innerText = "Submission received. Our office will contact you.";
+        form.reset();
+      } else {
+        msg.innerText = "Submission failed. Try again.";
       }
-    });
-  </script>
+    } catch (err) {
+      msg.innerText = "Connection error.";
+    }
+  });
+</script>
+
 </body>
 </html>
