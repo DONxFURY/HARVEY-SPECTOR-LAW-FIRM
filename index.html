@@ -1,108 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harvey Spector Law Firm</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Harvey Spector Law Firm | Premier Legal Representation for FiveM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container header-flex">
-    <div class="brand">
-      <img src="HARVEY_SPECTOR_LAW_FIRM.png" class="logo" />
-      <div>
-        <h1>Harvey Spector</h1>
-        <span>Attorneys at Law</span>
-      </div>
-    </div>
-    <nav>
-      <a href="#">Practice</a>
-      <a href="#">Team</a>
-      <a href="#">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm" class="nav-logo"/>
+                <div class="brand-text">
+                    <h1>Harvey Spector <span class="brand-subtitle">Law Firm</span></h1>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#practice">Practice Areas</a></li>
+                <li><a href="#about">Our Team</a></li>
+                <li><a href="#contact" class="nav-cta">Request Consultation</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Power. Precision. Results.</h2>
-    <p>Elite legal representation for the FiveM universe.</p>
-    <a href="#contact" class="cta-btn">Request Counsel</a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>EST. 2023</span>
+                </div>
+                <h2 class="hero-title">Justice Demands <span class="highlight">Excellence</span></h2>
+                <p class="hero-subtitle">Premier legal representation in the FiveM universe, combining real-world legal expertise with immersive roleplay experience.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Schedule Consultation</a>
+                    <a href="#practice" class="btn-secondary">Our Services <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Case Success Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Availability</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">FiveM Cases Handled</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="practice">
-  <div class="container">
-    <h3>Areas of Practice</h3>
-    <div class="practice-grid">
-      <div class="practice-card">Criminal Defense</div>
-      <div class="practice-card">Civil Litigation</div>
-      <div class="practice-card">Corporate Law</div>
-      <div class="practice-card">Asset Protection</div>
-    </div>
-  </div>
-</section>
+    <!-- Practice Areas -->
+    <section class="section practice-areas" id="practice">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-subtitle">Our Expertise</h3>
+                <h2 class="section-title">Areas of Practice</h2>
+                <p class="section-description">Specialized legal services tailored for the unique challenges of the FiveM universe.</p>
+            </div>
+            <div class="grid">
+                <div class="practice-card">
+                    <div class="card-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Criminal Defense</h3>
+                    <p>Aggressive representation for all criminal charges within FiveM jurisdiction, from petty theft to organized crime.</p>
+                    <ul class="card-list">
+                        <li>Felony Defense</li>
+                        <li>Traffic Violations</li>
+                        <li>Parole Hearings</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <div class="card-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Civil Litigation</h3>
+                    <p>Resolution of disputes between individuals and organizations, including contract breaches and property claims.</p>
+                    <ul class="card-list">
+                        <li>Contract Disputes</li>
+                        <li>Personal Injury</li>
+                        <li>Property Damage</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <div class="card-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Property Law</h3>
+                    <p>Legal counsel for real estate transactions, property disputes, and zoning regulations within the FiveM world.</p>
+                    <ul class="card-list">
+                        <li>Property Transactions</li>
+                        <li>Tenant Rights</li>
+                        <li>Zoning Compliance</li>
+                    </ul>
+                </div>
+                <div class="practice-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Business Law</h3>
+                    <p>Comprehensive legal services for FiveM businesses, from incorporation to contract negotiation and compliance.</p>
+                    <ul class="card-list">
+                        <li>Business Formation</li>
+                        <li>Contract Drafting</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="contact" id="contact">
-  <div class="container narrow">
-    <h3>Confidential Case Review</h3>
-    <form id="lawForm">
-      <input type="text" id="name" placeholder="Full Name" required />
-      <input type="text" id="discord" placeholder="Discord Username" required />
-      <textarea id="case" placeholder="Describe your situation..." rows="6" required></textarea>
-      <button type="submit">Submit Request</button>
-      <p id="responseMsg"></p>
-    </form>
-  </div>
-</section>
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build Your Case?</h2>
+                <p>Contact us for a confidential consultation. Our legal team responds within 2 hours during business hours.</p>
+                <a href="#contact" class="btn-primary btn-large">
+                    <i class="fas fa-phone-alt"></i> Contact Legal Team
+                </a>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <div class="container footer-flex">
-    <p>© 2025 Harvey Spector Law Firm</p>
-    <span>Discretion. Power. Authority.</span>
-  </div>
-</footer>
+    <!-- Contact Form -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Request Legal Consultation</h2>
+                    <p class="contact-description">Complete the form below to schedule a confidential consultation with our legal team. All information is protected by attorney-client privilege.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Typically within 2-4 hours during business hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Confidentiality</h4>
+                                <p>All communications protected by attorney-client privilege</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div>
+                                <h4>Primary Contact</h4>
+                                <p>Discord: HarveySpector#0001</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="lawForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="John Smith" required/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="discord">Discord Username *</label>
+                            <input type="text" id="discord" placeholder="username#0000" required/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="caseType">Case Type</label>
+                            <select id="caseType">
+                                <option value="">Select an area</option>
+                                <option value="criminal">Criminal Defense</option>
+                                <option value="civil">Civil Litigation</option>
+                                <option value="property">Property Law</option>
+                                <option value="business">Business Law</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="case">Case Details *</label>
+                            <textarea id="case" placeholder="Please provide a detailed description of your legal matter, including relevant parties, timeline, and desired outcome..." rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="btn-primary btn-full">
+                                <i class="fas fa-paper-plane"></i> Submit Legal Request
+                            </button>
+                            <p class="form-note">By submitting, you acknowledge attorney-client privilege applies to all communications.</p>
+                        </div>
+                    </form>
+                    <div id="responseMsg" class="response-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  const form = document.getElementById("lawForm");
-  const msg = document.getElementById("responseMsg");
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="HARVEY_SPECTOR_LAW_FIRM.png" alt="Harvey Spector Law Firm" class="footer-logo"/>
+                    <div>
+                        <h3>Harvey Spector Law Firm</h3>
+                        <p class="tagline">Excellence in FiveM Legal Representation</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#practice">Criminal Defense</a></li>
+                            <li><a href="#practice">Civil Litigation</a></li>
+                            <li><a href="#practice">Property Law</a></li>
+                            <li><a href="#practice">Business Law</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Firm</h4>
+                        <ul>
+                            <li><a href="#about">Our Team</a></li>
+                            <li><a href="#practice">Practice Areas</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <p class="contact-info">Discord: HarveySpector#0001</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Harvey Spector Law Firm. All rights reserved. This is a fictional law firm for FiveM roleplay purposes.</p>
+                <p class="disclaimer">This website represents a fictional law firm within the FiveM universe and is not affiliated with real legal services.</p>
+            </div>
+        </div>
+    </footer>
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const discord = document.getElementById("discord").value;
-    const caseDetails = document.getElementById("case").value;
-
-    const content = {
-      content: "**New Case Submission**\n"
-              + "**Name:** " + name + "\n"
-              + "**Discord:** " + discord + "\n"
-              + "**Case:** " + caseDetails
-    };
-
-    const webhookURL = "YOUR_WEBHOOK_HERE";
-
-    try {
-      const response = await fetch(webhookURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(content)
-      });
-
-      if (response.ok) {
-        msg.innerText = "Submission received. Our office will contact you.";
-        form.reset();
-      } else {
-        msg.innerText = "Submission failed. Try again.";
-      }
-    } catch (err) {
-      msg.innerText = "Connection error.";
-    }
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
